@@ -39,9 +39,6 @@ module.exports = function validateRegisterInput(data) {
     errors.password2 = 'Passwords must mutch';
   }
 
-
-
-
   return {
     errors,
     isValid: isEmpty(errors)
