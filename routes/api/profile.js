@@ -2,11 +2,31 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport');
+//const auth = require('../../middleware/auth');
+
+
+// @route GET api/profile
+// @desc Tests profile route
+// @access Public
+router.get('/', (req, res) => res.send('Profile route'));
+
 
 // Load Profile model
 const Profile = require('../../models/Profile');
 // Load User profile
 const User = require('../../models/User');
+
+// @route GET api/profile/me
+// @desc Get current users profile
+// @access Private
+router.get('/me', async (req, res) => {
+  try{
+
+  } catch(err){
+    console.log(err.message);
+    res.status(500).send('server Error');
+  }
+});
 
 // @route GET api/profile/test
 // @desc Tests profile route
