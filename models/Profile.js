@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 const ProfileSchema = new Schema({
-  user:{
+  user: {
     type: Schema.Types.ObjectId,
     ref: 'users'
   },
@@ -56,8 +56,8 @@ const ProfileSchema = new Schema({
       },
       description: {
         type: String
-      },
-    }    
+      }
+    }
   ],
   education: [
     {
@@ -86,14 +86,14 @@ const ProfileSchema = new Schema({
       },
       description: {
         type: String
-      },
-    }    
+      }
+    }
   ],
   social: {
     youtube: {
       type: String
     },
-    twiiter: {
+    twitter: {
       type: String
     },
     facebook: {
@@ -104,9 +104,9 @@ const ProfileSchema = new Schema({
     },
     instagram: {
       type: String
-    },
+    }
   },
-  date:{
+  date: {
     type: Date,
     default: Date.now
   }
